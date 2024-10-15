@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#about" class="logo">My Portfolio</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="ham" id="ham">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        
+        <h1>B JAYANTHA SRI</h1>
+        <p>B.Tech Artificial Intelligence & Data Science</p>
+    </header>
+    <main>
+        <section id="about">
+            <div class="about-content">
+                <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\profile.jpg" alt="Your Profile Image" class="profile-image">
+                <p>I’m B Jayantha Sri, a third-year student pursuing a B.Tech in Artificial Intelligence and Data Science. As a passionate web developer and designer, I have honed my skills in HTML, CSS, JavaScript, Python, and Java. I hold certifications in Generative AI from GUVI and Beginner HTML and CSS from Infosys. I enjoy tackling complex problems and am always eager to learn more about emerging technologies. In my spare time, I work on personal projects to enhance my skills. I'm excited about the opportunities in the tech field and look forward to making a positive impact through my work.</p>
+            </div>
+        </section>
+        
+        
+        
+<section id="skills">
+    <h2>Skills</h2>
+    <p>Here are some of my key skills:</p>
+    <ul>
+        <li>
+            <strong>Programming Languages:</strong>
+            <p>Proficient in Python, Java, and JavaScript.</p>
+        </li>
+        <li>
+            <strong>Web Development:</strong>
+            <p>Skilled in HTML, CSS, and frameworks like Bootstrap for responsive web design.</p>
+        </li>
+        <li>
+            <strong>Data Analysis:</strong>
+            <p>Experienced in using tools like Pandas and NumPy for data manipulation and analysis.</p>
+        </li>
+        <li>
+            <strong>Machine Learning:</strong>
+            <p>Knowledge of machine learning algorithms using libraries like Scikit-learn and TensorFlow.</p>
+        </li>
+        <li>
+            <strong>Soft Skills:</strong>
+            <p>Strong problem-solving abilities, teamwork, and communication skills.</p>
+        </li>
+    </ul>
+</section>
+
+        
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>
+                    <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\gen ai.jpg" alt="Generative AI Certificate" class="cert-image"> 
+                    <p>Generative AI Certification, GUVI, 2024</p>
+                </li>
+                <li>
+                    <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\html and css.png" alt="Certification 2" class="cert-image"> 
+                    <p>Beginner HTML and CSS, Infosys, 2024</p>
+                </li>
+                <li>
+                    <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\google anlytics.png" alt="Certification 2" class="cert-image"> 
+                    <p>Google Analytics for Beginner, Google Analytics Academy, 2024</p>
+                </li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\military.avif" alt="Project 1 Image">
+                <h3>Military Surveillance System</h3>
+                <p>A real-time surveillance system to enhance military intelligence and safety. This system
+                    leverages advanced technologies to provide comprehensive monitoring capabilities, enabling
+                    timely decision-making and threat mitigation.</p>
+            </div>
+            <div class="project">
+                <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\vedio surveillance.jpg" alt="Project 2 Image">
+                <h3>Intelligent vedio Surveillance System</h3>
+                <p>An intelligent video surveillance system leveraging AI to enhance traffic accident management.
+                    This system utilizes advanced computer vision and ML techniques to analyze real-time video
+                    footage, providing valuable insights for accident investigation, prevention, and response</p>
+            </div>
+            <div class="project">
+                <img src="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\women safety.jpg" alt="Project 2 Image">
+                <h3>Women Safety Analytic Using SOS Drone Monitoring</h3>
+                <p>To agument women’s safety we use Advance Drone monitoring, which consist advanced drone technology(AI&ML) alongside  comprehensive datasets to provide real time survillance and rapid responses.
+                </p>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <a href="C:\Users\jayantha sri\OneDrive\Desktop\Web Development\Jayantha Sri.pdf" download>Download Resume (PDF)</a>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>alpha12@gmail.com</p>
+            <p>9025816937</p>
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 B Jayantha Sri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        var modal = document.getElementById("imageModal");
+
+       
+        var images = document.getElementsByClassName('cert-image');
+        var modalImg = document.getElementById("modalImage");
+        var captionText = document.getElementById("caption");
+
+        for (let img of images) {
+            img.onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.nextElementSibling.innerHTML; 
+            }
+        }
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        
+    const ham = document.getElementById('ham');
+    const navLinks = document.querySelector('.nav-links');
+
+    ham.addEventListener('click', () => {
+        ham.classList.toggle('active');
+        navLinks.classList.toggle('show');
+    });
+
+
+    </script>
+</body>
+</html>
